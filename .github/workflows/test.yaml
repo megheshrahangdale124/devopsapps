@@ -15,3 +15,16 @@ jobs:
           distribution: 'adopt'
       - name: Build with maven
         run: mvn clean verify
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: foodies
+          path: target/*.war
+
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: display
+        run: echo "Rushikesh Dagwal"
+
+
