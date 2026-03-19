@@ -8,9 +8,9 @@ WORKDIR /u01/middleware
 ADD https://download.java.net/openjdk/jdk11/ri/openjdk-11+28_linux-x64_bin.tar.gz .
 RUN tar -xzvf openjdk-11+28_linux-x64_bin.tar.gz
 RUN rm openjdk-11+28_linux-x64_bin.tar.gz
-ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.63/bin/apache-tomcat-9.0.63.tar.gz .
-RUN tar -xzvf apache-tomcat-9.0.63.tar.gz
-RUN rm apache-tomcat-9.0.63.tar.gz
+ADD https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.115/bin/apache-tomcat-9.0.115.tar.gz .
+RUN tar -xzvf apache-tomcat-9.0.115.tar.gz
+RUN rm apache-tomcat-9.0.115.tar.gz
 
 COPY target/foodies.war $TOMCAT_HOME/webapps
 COPY run.sh .
