@@ -1,7 +1,7 @@
 name: java workflow
 on: push
-branches:
-  - feat/cicd  
+# branches:
+#   - feat/cicd  
 jobs:
   build:
     runs-on: ubuntu-latest
