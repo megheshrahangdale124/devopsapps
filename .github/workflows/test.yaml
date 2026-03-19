@@ -17,6 +17,7 @@ jobs:
         run: mvn clean verify
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
+        
         with:
           name: foodies
           path: target/*.war
