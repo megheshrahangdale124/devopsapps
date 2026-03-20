@@ -51,7 +51,7 @@ jobs:
       - name: Push to DockerHub
         run: docker tag foodies:1.0 ${{ secrets.DOCKER_USER_NAME }}/foodies:1.0
       - name: Push Image
-        run: docker push ${{ secrets.DOCKER_USER_NAME }}/foodies:1.0
+        run: docker push ${{ secrets.DOCKER_USER_NAME }}/foodies:2.0
       
 
 
