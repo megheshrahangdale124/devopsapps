@@ -1,6 +1,5 @@
 name: java workflow
 on: workflow_dispatch
-
 # branches:
 #   - feat/cicd  
 jobs:
