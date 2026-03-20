@@ -1,4 +1,3 @@
 #!/bin/bash
-set -e
-nohup $TOMCAT_HOME/bin/startup.sh &
-exec $@
+$TOMCAT_HOME/bin/startup.sh
+tail -f $TOMCAT_HOME/logs/catalina.out
