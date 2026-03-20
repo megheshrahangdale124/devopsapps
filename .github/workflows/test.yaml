@@ -1,5 +1,6 @@
 name: java workflow
-on: push
+on: workflow_dispatch
+
 # branches:
 #   - feat/cicd  
 jobs:
@@ -48,10 +49,10 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USER_NAME }}
           password: ${{ secrets.DOCKER_USER_PASS }}
-      # - name: Push to DockerHub
-      #   run: docker tag foodies:1.0 ${{ secrets.DOCKER_USER_NAME }}/foodies:1.0
-      - name: Push Image
-        run: docker push ${{ secrets.DOCKER_USER_NAME }}/foodies:${{ github.run_number }}
+      
+      # - name: Push Image
+      #   run: docker push ${{ secrets.DOCKER_USER_NAME }}/foodies:${{ github.run_number }} if you want to push the image to dockerhub  
+      # then you can uncomment the above code and push the image to dockerhub
     
 
 
